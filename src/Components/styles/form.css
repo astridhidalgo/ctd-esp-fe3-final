@@ -1,8 +1,97 @@
-form {
+.form-container {
+  max-width: 300px;
+  height: 250px;
+  margin: 60px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f7fc;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block; /* Mostrar etiquetas en bloque */
+  margin-bottom: 10px; /* Margen inferior */
+  text-align: left;
+  margin-left: 20px;
+  color: #440f80; /* Color de las etiquetas en morado */
+}
+
+.form-group input {
+  width: 80%; /* Ancho completo */
+
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #440f80; /* Borde del campo de entrada */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.form-group input:focus {
+  outline: none; /* Quitar el contorno al enfocar */
+  border-color: 1px #440f80; /* Cambiar el color del borde al enfocar */
+}
+
+.form-container button {
+  background-color: #440f80; /* Color de fondo del botón en morado */
+  color: #ffffff; /* Color del texto en blanco */
+  border: none; /* Quitar el borde */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar el cursor al pasar por encima */
+  width: 120px;
+  height: 40px;
+}
+
+.form-container button:hover {
+  background-color: var(--violetaOscuro-dentinst);
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  width: 120px;
+}
+
+.modal {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 300px;
-  height: 100px;
-  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+  background-color: rgba(65, 17, 110, 0.5);
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.modal-close {
+  display: none;
+}
+
+.contenedor-botton-modal {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

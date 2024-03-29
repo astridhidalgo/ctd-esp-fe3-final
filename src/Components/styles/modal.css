@@ -27,22 +27,17 @@ body {
   bottom: 0;
   left: 0;
   padding: 16px;
-  background-color: rgba(
-    65,
-    17,
-    110,
-    0.5
-  ); /* Fondo violeta semi-transparente */
-  z-index: 999; /* Asegurar que el modal esté en la parte superior */
+  background-color: rgba(65, 17, 110, 0.5);
+  z-index: 999;
 }
 
 .modal-content {
-  background-color: #ffffff; /* Color de fondo blanco */
-  width: 80%; /* Ancho del modal */
-  max-width: 600px; /* Ancho máximo del modal */
-  padding: 20px; /* Espaciado interno */
-  border-radius: 8px; /* Bordes redondeados */
-  position: relative; /* Posición relativa para posicionar elementos hijos */
+  background-color: #ffffff;
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
 }
 
 .modal-close {

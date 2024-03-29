@@ -17,7 +17,6 @@ const Detail = ({ dentistId, imagenUsuario }) => {
 
   const isFav = state.favs.some((fav) => fav.id === dentistSelected.id);
 
-  console.log({ isFav });
   const addFav = () => {
     if (isFav) {
       dispatch({ type: "DEL_FAV", payload: dentistSelected });

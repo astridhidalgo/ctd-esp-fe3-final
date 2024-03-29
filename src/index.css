@@ -33,7 +33,6 @@ code {
 h1 {
   text-align: center;
 }
-/*navbar*/
 
 .dark {
   background-color: #12121296;
@@ -43,6 +42,7 @@ h1 {
   color: white;
 }
 
+/*navbar*/
 @media (max-width: 1024px) {
   nav {
     display: flex;
@@ -61,6 +61,10 @@ h1 {
   }
 }
 
+.toggle-button-input {
+  display: none;
+}
+
 @media (max-width: 560px) {
   nav {
     max-width: 550px;
@@ -70,4 +74,11 @@ h1 {
     grid-template-columns: auto auto;
     grid-template-rows: auto;
   }
+}
+
+.content-contact {
+  text-align: center;
+  height: 1000px;
+  color: #440f80;
+  margin-top: 50px;
 }

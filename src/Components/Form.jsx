@@ -1,17 +1,38 @@
 import { useState } from "react";
 import "../Components/styles/form.css";
+import Modal from "./Modal";
 
 const Form = () => {
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [mensajeOk, setMensajeOk] = useState("");
+  const [visible, setVisible] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (nombre.length <= 5 || !email.includes("@") || !email.includes(".")) {
-      setError("Por favor verifique su información nuevamente");
+    if (!nombre.trim()) {
+      setError("Por favor ingrese su nombre");
+      setVisible(true);
+      return;
+    }
+
+    if (nombre.length < 3) {
+      setError("El nombre debe tener al menos 3 caracteres");
+      setVisible(true);
+      return;
+    }
+
+    if (!email.trim()) {
+      setError("Por favor ingrese su correo electrónico");
+      setVisible(true);
+      return;
+    }
+
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      setError("Por favor ingrese un correo electrónico válido");
+      setVisible(true);
       return;
     }
 
@@ -24,14 +45,25 @@ const Form = () => {
     setNombre("");
     setEmail("");
     setError("");
+    setVisible(true);
   };
 
   return (
-    <div>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      {mensajeOk && <p style={{ color: "green" }}>{mensajeOk}</p>}
+    <div className="form-container">
+      {error && (
+        <Modal show={visible} onClose={() => setVisible(false)}>
+          <p style={{ color: "red" }}>{error}</p>
+        </Modal>
+      )}
+
+      {mensajeOk && (
+        <Modal show={visible} onClose={() => setVisible(false)}>
+          <p style={{ color: "green" }}>{mensajeOk}</p>
+        </Modal>
+      )}
+
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="form-group">
           <label htmlFor="nombre">Nombre completo:</label>
           <input
             type="text"
@@ -41,7 +73,7 @@ const Form = () => {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input
             type="email"
@@ -51,7 +83,9 @@ const Form = () => {
             required
           />
         </div>
-        <button type="submit">Enviar</button>
+        <button className="buttonForm" type="submit">
+          Enviar
+        </button>
       </form>
     </div>
   );

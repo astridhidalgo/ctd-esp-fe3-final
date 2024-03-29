@@ -7,7 +7,7 @@ const Modal = ({ children, show, onClose }) => {
   useEffect(() => {
     setTimeout(() => {
       setIsVisible(show);
-    }, 1000);
+    }, 300);
   }, [show]);
 
   return isVisible ? (
