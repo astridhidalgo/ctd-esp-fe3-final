@@ -2,20 +2,22 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useGlobalContext } from "../Context/global.context";
 import { getDentistById } from "../Api/dentist";
+import "../Components/styles/modal.css";
 
-const Detail = () => {
+const Detail = ({ dentistId, imagenUsuario }) => {
   const { id } = useParams();
   const { state, dispatch } = useGlobalContext();
   const { dentistSelected } = state;
 
   useEffect(() => {
-    getDentistById(id).then((data) => {
+    getDentistById(dentistId).then((data) => {
       dispatch({ type: "GET_DETAIL", payload: data });
     });
-  }, [id]);
+  }, [dentistSelected.id]);
 
   const isFav = state.favs.some((fav) => fav.id === dentistSelected.id);
 
+  console.log({ isFav });
   const addFav = () => {
     if (isFav) {
       dispatch({ type: "DEL_FAV", payload: dentistSelected });
@@ -25,40 +27,51 @@ const Detail = () => {
   };
 
   return (
-    <>
-      <h1>Detail Dentist id </h1>
-      <table className="detail-table">
-        <tbody>
-          <tr>
-            <td>Name:</td>
-            <td>{dentistSelected.name}</td>
-          </tr>
-          <tr>
-            <td>Email:</td>
-            <td>
-              <a href={`mailto:${dentistSelected.email}`}>
-                {dentistSelected.email}
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>Phone:</td>
-            <td>
-              <a href={`tel:${dentistSelected.phone}`}>
-                {dentistSelected.phone}
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>Website:</td>
-            <td>
-              <a href={dentistSelected.website}>{dentistSelected.website}</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <button onClick={addFav}>{isFav ? "🔖" : "⭐"}</button>
-    </>
+    <div className="detail-container">
+      <div className="imagen-dentista">
+        <img src={imagenUsuario} alt="avatar" />
+      </div>
+      <div className="content-info-dentista">
+        <div className="division"></div>
+        <div className="info-dentista">
+          <img src="../images/iconEmail.svg" alt="email-icon"></img>
+          <p className="texto-info-dentista">
+            <strong>Email: </strong>
+            <a href={`mailto:${dentistSelected.email}`}>
+              {dentistSelected.email}
+            </a>
+          </p>
+        </div>
+        <div className="info-dentista">
+          <img src="../images/iconPhone.svg" alt="phone-icon"></img>
+          <p className="texto-info-dentista">
+            <strong>Phone: </strong>
+            <a href={`tel:${dentistSelected.phone}`}>{dentistSelected.phone}</a>
+          </p>
+        </div>
+        <div className="info-dentista">
+          <img src="../images/iconWebsite.svg" alt="website-icon"></img>
+          <p className="texto-info-dentista">
+            <strong>Website: </strong>
+            <a href={dentistSelected.website}>{dentistSelected.website}</a>
+          </p>
+        </div>
+      </div>
+      <div className="content-nombreDr-fav">
+        <div className="nombreDr-fav">
+          <p>
+            <strong>Dr. {dentistSelected.name}</strong>
+          </p>
+          <button onClick={addFav} className="favButton-Detail" id="favButton">
+            {isFav ? (
+              <img src="/images/icon_heart_lleno.svg" alt="Filled heart" />
+            ) : (
+              <img src="/images/icon_heart.svg" alt="Empty heart" />
+            )}
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 

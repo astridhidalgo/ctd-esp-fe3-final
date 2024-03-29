@@ -32,7 +32,7 @@ export const ContextProvider = ({ children }) => {
         username: a.username,
         id: a.id,
       }));
-      console.log(formattedData);
+
       dispatch({ type: "GET_LIST", payload: formattedData });
     });
   }, []);

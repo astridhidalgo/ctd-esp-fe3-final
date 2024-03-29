@@ -1,4 +1,5 @@
 import { useGlobalContext } from "../Context/global.context";
+import "../Components/styles/footer.css";
 
 const Footer = () => {
   const { state } = useGlobalContext();

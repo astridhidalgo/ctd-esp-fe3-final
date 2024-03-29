@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --negro-dentinst: #000000;
+  --plomo-dentinst: #d9d9d9;
+  --blanco-dentinst: #ffffff;
+  --violetaClaro-dentinst: #a47ec9;
+  --violetaOscuro-dentinst: #591ba8;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+  background-color: rgba(
+    65,
+    17,
+    110,
+    0.5
+  ); /* Fondo violeta semi-transparente */
+  z-index: 999; /* Asegurar que el modal esté en la parte superior */
+}
+
+.modal-content {
+  background-color: #ffffff; /* Color de fondo blanco */
+  width: 80%; /* Ancho del modal */
+  max-width: 600px; /* Ancho máximo del modal */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  position: relative; /* Posición relativa para posicionar elementos hijos */
+}
+
+.modal-close {
+  position: absolute;
+  right: 40px;
+  font-size: 60px;
+  cursor: pointer;
+  color: #440f80;
+  z-index: 9999;
+}
+
+.contenedor-botton-modal {
+  display: flex;
+  height: 40px;
+  justify-content: flex-end;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.detail-container {
+  display: grid;
+  grid-template-columns: 44% 56%;
+  grid-template-rows: auto 30%;
+}
+
+.imagen-dentista {
+  grid-area: 1/1;
+}
+
+.content-info-dentista {
+  grid-area: 1/2;
+  display: grid;
+  grid-template-rows: repeat(3, 33px);
+  align-content: center;
+  justify-content: start;
+  gap: 15px;
+  background-color: #f2f2f4;
+  background-size: auto;
+}
+
+.division {
+  width: 5px;
+  height: 160px;
+  background-color: #440f80;
+  margin-left: 10px;
+  margin-top: 35px;
+  border-radius: 30px;
+}
+
+.info-dentista {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.info-dentista img {
+  max-width: 15%;
+}
+
+.info-dentista p {
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.texto-info-dentista strong {
+  color: var(--violetaOscuro-dentinst);
+}
+
+.texto-info-dentista a {
+  text-decoration: none;
+  color: var(--violetaOscuro-dentinst);
+}
+
+.modal-button {
+  grid-area: 2/3;
+  background-color: var(--violetaOscuro-dentinst);
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  width: 120px;
+  margin-bottom: 100px;
+}
+
+.content-nombreDr-fav {
+  grid-area: 2/1;
+  display: grid;
+  grid-template-columns: 100% 20%;
+  align-content: center;
+  justify-content: start;
+}
+
+.nombreDr-fav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.nombreDr-fav strong {
+  max-width: 100%;
+}
+
+.nombreDr-fav p {
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.nombreDr-fav strong {
+  color: var(--violetaOscuro-dentinst);
+}
+
+.favButton-Detail {
+  border: none;
+}

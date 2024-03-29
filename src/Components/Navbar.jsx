@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { routes } from "../Routes/routes";
 import ToogleButton from "./ToggleButton";
+import "../Components/styles/navbar.css";
 
 const Navbar = () => {
   return (
