@@ -4,7 +4,7 @@
   margin: 60px auto;
   padding: 20px;
   border-radius: 8px;
-  background-color: #f9f7fc;
+  background-color: #f5f0fb;
 }
 
 .form-group {
@@ -12,39 +12,40 @@
 }
 
 .form-group label {
-  display: block; /* Mostrar etiquetas en bloque */
-  margin-bottom: 10px; /* Margen inferior */
+  font-size: 18px;
+  font-weight: 600;
+  display: block;
   text-align: left;
   margin-left: 20px;
-  color: #440f80; /* Color de las etiquetas en morado */
+  color: var(--violetaOscuro-dentist);
 }
 
 .form-group input {
-  width: 80%; /* Ancho completo */
+  width: 80%;
 
-  padding: 10px; /* Espaciado interno */
-  border: 1px solid #440f80; /* Borde del campo de entrada */
-  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px;
+  border: 1px solid var(--violetaOscuro-dentist);
+  border-radius: 5px;
 }
 
 .form-group input:focus {
-  outline: none; /* Quitar el contorno al enfocar */
-  border-color: 1px #440f80; /* Cambiar el color del borde al enfocar */
+  outline: none;
+  border-color: 1px var(--violetaOscuro-dentist);
 }
 
 .form-container button {
-  background-color: #440f80; /* Color de fondo del botón en morado */
-  color: #ffffff; /* Color del texto en blanco */
-  border: none; /* Quitar el borde */
-  padding: 10px 20px; /* Espaciado interno */
-  border-radius: 5px; /* Bordes redondeados */
-  cursor: pointer; /* Cambiar el cursor al pasar por encima */
+  background-color: var(--violetaOscuro-dentist);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
   width: 120px;
   height: 40px;
 }
 
 .form-container button:hover {
-  background-color: var(--violetaOscuro-dentinst);
+  background-color: var(--violetaOscuro-dentist);
   color: #ffffff;
   border: none;
   padding: 5px 10px;
@@ -75,16 +76,6 @@
   padding: 20px;
   border-radius: 8px;
   position: relative;
-}
-
-.modal-close {
-  display: none;
-}
-
-.contenedor-botton-modal {
-  display: flex;
-  height: 40px;
-  justify-content: center;
 }
 
 @keyframes fadeIn {

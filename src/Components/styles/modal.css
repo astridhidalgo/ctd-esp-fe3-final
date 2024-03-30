@@ -10,11 +10,11 @@ body {
 }
 
 :root {
-  --negro-dentinst: #000000;
-  --plomo-dentinst: #d9d9d9;
-  --blanco-dentinst: #ffffff;
-  --violetaClaro-dentinst: #a47ec9;
-  --violetaOscuro-dentinst: #591ba8;
+  --negro-dentist: #000000;
+  --plomo-dentist: #d9d9d9;
+  --blanco-dentist: #ffffff;
+  --violetaClaro-dentist: #a47ec9;
+  --violetaOscuro-dentist: #591ba8;
 }
 
 .modal {
@@ -32,7 +32,7 @@ body {
 }
 
 .modal-content {
-  background-color: #ffffff;
+  background-color: var(--blanco-dentist);
   width: 80%;
   max-width: 600px;
   padding: 20px;
@@ -41,11 +41,12 @@ body {
 }
 
 .modal-close {
+  display: block;
   position: absolute;
   right: 40px;
   font-size: 60px;
   cursor: pointer;
-  color: #440f80;
+  color: var(--violetaOscuro-dentist);
   z-index: 9999;
 }
 
@@ -88,7 +89,7 @@ body {
 .division {
   width: 5px;
   height: 160px;
-  background-color: #440f80;
+  background-color: var(--violetaOscuro-dentist);
   margin-left: 10px;
   margin-top: 35px;
   border-radius: 30px;
@@ -110,17 +111,17 @@ body {
 }
 
 .texto-info-dentista strong {
-  color: var(--violetaOscuro-dentinst);
+  color: var(--violetaOscuro-dentist);
 }
 
 .texto-info-dentista a {
   text-decoration: none;
-  color: var(--violetaOscuro-dentinst);
+  color: var(--violetaOscuro-dentist);
 }
 
 .modal-button {
   grid-area: 2/3;
-  background-color: var(--violetaOscuro-dentinst);
+  background-color: var(--violetaOscuro-dentist);
   color: #ffffff;
   border: none;
   padding: 5px 10px;
@@ -156,7 +157,7 @@ body {
 }
 
 .nombreDr-fav strong {
-  color: var(--violetaOscuro-dentinst);
+  color: var(--violetaOscuro-dentist);
 }
 
 .favButton-Detail {

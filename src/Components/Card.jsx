@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useGlobalContext } from "../Context/global.context";
-import { Link } from "react-router-dom";
 import "../Components/styles/card.css";
 import Modal from "../Components/Modal";
 import Detail from "../Pages/Detail";

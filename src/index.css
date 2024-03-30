@@ -10,16 +10,15 @@ body {
 }
 
 :root {
-  --negro-dentinst: #000000;
-  --plomo-dentinst: #d9d9d9;
-  --blanco-dentinst: #ffffff;
-  --violetaClaro-dentinst: #a47ec9;
-  --violetaOscuro-dentinst: #591ba8;
+  --negro-dentist: #000000;
+  --plomo-dentist: #d9d9d9;
+  --blanco-dentist: #ffffff;
+  --violetaClaro-dentist: #a47ec9;
+  --violetaOscuro-dentist: #591ba8;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+* {
+  font-family: "Roboto";
 }
 
 .favButton {
@@ -32,53 +31,44 @@ code {
 
 h1 {
   text-align: center;
+  color: var(--violetaOscuro-dentist);
+}
+
+.content-fav h3 {
+  height: 600px;
+  text-align: center;
+  color: var(--violetaOscuro-dentist);
 }
 
 .dark {
   background-color: #12121296;
   color: white;
 }
-.dark > a {
+.dark > .content-contact {
   color: white;
 }
 
-/*navbar*/
-@media (max-width: 1024px) {
-  nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    padding: 1rem;
-    background: var(--violetaClaro-dentinst);
-    height: 80px;
-    border-bottom: 8px solid var(--violetaOscuro-dentinst);
-  }
-  .card-grid {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto;
-  }
+.dark > .content-fav h1 {
+  color: white;
+}
+
+.dark > .content-fav h3 {
+  color: white;
+}
+.dark > .content-fav {
+  height: 100%;
 }
 
 .toggle-button-input {
   display: none;
 }
-
-@media (max-width: 560px) {
-  nav {
-    max-width: 550px;
-  }
-  .card-grid {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto;
-  }
-}
-
 .content-contact {
+  width: 100%;
+  height: 800px;
   text-align: center;
-  height: 1000px;
-  color: #440f80;
-  margin-top: 50px;
+  color: var(--violetaOscuro-dentist);
+  margin: 5px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
 }

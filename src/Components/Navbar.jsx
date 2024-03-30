@@ -17,7 +17,7 @@ const Navbar = () => {
         </Link>
         <div className="linea_link"></div>
         <Link to={routes.contact} className="link">
-          Conact
+          Contac
         </Link>
         <div className="linea_link"></div>
       </div>

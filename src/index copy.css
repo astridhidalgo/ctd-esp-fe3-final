@@ -10,11 +10,11 @@ body {
 }
 
 :root {
-  --negro-dentinst: #000000;
-  --plomo-dentinst: #d9d9d9;
-  --blanco-dentinst: #ffffff;
-  --violetaClaro-dentinst: #a47ec9;
-  --violetaOscuro-dentinst: #591ba8;
+  --negro-dentist: #000000;
+  --plomo-dentist: #d9d9d9;
+  --blanco-dentist: #ffffff;
+  --violetaClaro-dentist: #a47ec9;
+  --violetaOscuro-dentist: #591ba8;
 }
 
 code {

@@ -64,7 +64,7 @@ const Form = () => {
 
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="nombre">Nombre completo:</label>
+          <label htmlFor="nombre">Full Name:</label>
           <input
             type="text"
             id="nombre"
@@ -84,7 +84,7 @@ const Form = () => {
           />
         </div>
         <button className="buttonForm" type="submit">
-          Enviar
+          Submit
         </button>
       </form>
     </div>

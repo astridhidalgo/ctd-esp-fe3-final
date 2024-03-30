@@ -1,20 +1,55 @@
-footer {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  position: relative;
+.footer {
+  position: fixed;
   bottom: 0;
-  width: 90%;
-  height: 40px;
-  margin-top: 2rem;
+  left: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 30px 50px;
+  background-color: var(--violetaOscuro-dentist);
+  align-items: center;
+  z-index: 1000;
 }
 
-footer > img {
-  width: 200px;
-  margin: 0;
+.lienea-superior {
+  height: 5px;
+  background-color: var(--blanco-dentist);
 }
-footer > p {
-  margin: 0;
-  padding-top: 0.7rem;
+
+.contenedor-footer {
+  display: grid;
+  grid-template-columns: 1fr 15%;
+  grid-template-rows: 85px;
+}
+
+.developer {
+  color: var(--blanco-dentist);
+  margin-left: 20px;
+}
+
+.developer .icono {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.digitalHouse {
+  display: flex;
+  justify-content: center;
+  margin-right: 40px;
+  background-color: var(--blanco-dentist);
+  border-radius: 50px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.digitalHouse p {
+  display: flex;
+  color: var(--violetaOscuro-dentist);
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.digitalHouse img {
+  width: 135px;
+  height: 45px;
 }
